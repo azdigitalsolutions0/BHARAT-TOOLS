@@ -64,3 +64,59 @@
 .agency-credit a{display:inline-block;color:#111;text-decoration:none;font:700 13px "Space Grotesk";letter-spacing:.08em;border-bottom:2px solid #111;padding:4px 2px;transition:color .2s,border-color .2s}
 .agency-credit a:hover{color:#fff;border-color:#fff}
 @media(max-width:600px){.ticker{padding:12px 0}.ticker-track{animation-duration:20s}.agency-credit{margin-top:23px;padding-top:15px}}
+
+/* FINAL BRAND-LED ANIMATED HERO */
+.hero-art.logo-hero{position:relative;min-height:500px;display:grid;place-items:center;isolation:isolate;overflow:hidden;background:radial-gradient(circle at center,#292929 0%,#171717 48%,#101010 78%)}
+.hero-photo-frame,.hero-product-scene{display:none!important}
+.hero-brand-logo{position:relative;z-index:3;width:min(390px,72%);height:auto;object-fit:contain;filter:drop-shadow(0 22px 26px #000b);animation:brandFloat 5s ease-in-out infinite,brandAppear 1s ease both}
+.logo-glow{position:absolute;z-index:0;width:65%;aspect-ratio:1;border-radius:50%;background:#f4c400;filter:blur(75px);opacity:.13;animation:glowPulse 4s ease-in-out infinite}
+.logo-orbit{position:absolute;z-index:1;border:2px solid transparent;border-top-color:#f4c400;border-right-color:#f4c400;border-radius:50%;animation:orbitSpin 5s linear infinite}
+.orbit-one{width:82%;aspect-ratio:1}
+.orbit-two{width:94%;aspect-ratio:1;border-width:1px;border-bottom-color:#f4c40066;animation-duration:11s;animation-direction:reverse}
+.hero-logo-caption{position:absolute;z-index:4;bottom:5%;left:50%;transform:translateX(-50%);white-space:nowrap;color:#f4c400;font:700 9px "Space Grotesk";letter-spacing:.2em}
+.hero-logo-caption span{color:#aaa}
+.logo-spark{position:absolute;z-index:4;right:5%;bottom:18%;color:#f4c400;font-size:35px;animation:sparkPulse 2s ease-in-out infinite}
+@keyframes brandFloat{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-12px) rotate(1deg)}}
+@keyframes brandAppear{from{opacity:0;scale:.88}to{opacity:1;scale:1}}
+@keyframes orbitSpin{to{transform:rotate(360deg)}}
+@keyframes glowPulse{0%,100%{opacity:.08;scale:.9}50%{opacity:.2;scale:1.12}}
+@keyframes sparkPulse{0%,100%{opacity:.45;transform:rotate(0) scale(.85)}50%{opacity:1;transform:rotate(90deg) scale(1.15)}}
+/* Smooth, continuous category marquee */
+.ticker{background:var(--yellow);overflow:hidden;white-space:nowrap;padding:15px 0}
+.ticker-track{display:flex;width:max-content;animation:tickerMove 22s linear infinite}
+.ticker-track span{display:block;flex:none;padding-right:28px}
+.ticker-track b{margin:0 18px}
+@keyframes tickerMove{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.ticker:hover .ticker-track{animation-play-state:paused}
+/* Agency link centered inside the yellow contact section */
+.agency-credit{display:flex;justify-content:center;align-items:center;margin:34px auto 0;padding-top:20px;border-top:1px solid #1b160044}
+.agency-credit a{color:#111;text-decoration:none;font:700 14px "Space Grotesk";letter-spacing:.06em;position:relative}
+.agency-credit a:after{content:"";position:absolute;left:0;bottom:-5px;width:100%;height:2px;background:#111;transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.agency-credit a:hover:after{transform:scaleX(1)}
+/* Footer restores the shop's original logo + brand at left */
+footer .footer{display:flex!important;align-items:center;justify-content:space-between!important;gap:20px}
+footer .footer .brand{display:flex!important;align-items:center;gap:10px;color:#fff}
+footer .footer .brand img{display:block;width:44px;height:44px;object-fit:contain;border-radius:50%}
+footer .footer>span{width:auto!important;text-align:right;color:#aaa}
+@media(max-width:600px){
+ .hero-art.logo-hero{min-height:340px;margin:0 -15px}
+ .hero-brand-logo{width:min(285px,70%)}
+ .hero-logo-caption{font-size:7px;letter-spacing:.14em}
+ .agency-credit{margin-top:25px;padding-top:16px}
+ .agency-credit a{font-size:12px}
+ footer .footer{flex-wrap:wrap!important;justify-content:center!important;text-align:center}
+ footer .footer .brand{justify-content:center}
+ footer .footer>span{width:100%!important;text-align:center}
+}
+/* Subtle entrance animations for content blocks */
+@media(prefers-reduced-motion:no-preference){
+ .category-card,.product-card,.about-grid,.band-inner{animation:contentLift .7s ease both}
+ .category-card:nth-child(2),.product-card:nth-child(2){animation-delay:.08s}
+ .category-card:nth-child(3),.product-card:nth-child(3){animation-delay:.16s}
+}
+@keyframes contentLift{from{opacity:.65;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+
+@media(prefers-reduced-motion:no-preference){
+ .section,.band,.contact{opacity:.01;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+ .section.is-visible,.band.is-visible,.contact.is-visible{opacity:1;transform:translateY(0)}
+}

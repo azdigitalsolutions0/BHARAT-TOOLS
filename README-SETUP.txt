@@ -73,3 +73,11 @@ LATEST REQUESTED VISUAL BEHAVIOUR
 - Yellow animated perimeter remains around the hero photo.
 - AZ DIGITAL SOLUTIONS is centered at the bottom of the yellow contact section; the text itself is clickable and opens https://www.instagram.com/azdigitalsolutions/ . No 'Instagram profile' label is displayed.
 - Original black footer retains Bharat Tools logo/brand and copyright.
+
+LATEST BRAND / CART FIX
+- Hero drill photo slideshow removed. The user-supplied 500x500 original M/S Bharat Tools logo is now used in the hero and site branding.
+- Animated orbit rings, glow and floating logo motion added.
+- Category ticker continuously scrolls.
+- Stale previous demo cart key bt_cart is removed; the new cart uses bt_cart_v3 and starts empty on this release.
+- AZ DIGITAL SOLUTIONS appears centered inside the yellow contact section and links directly to https://www.instagram.com/azdigitalsolutions/ (confirm handle if needed).
+- Footer's Bharat Tools logo and brand label are restored at the left with copyright at the right.
