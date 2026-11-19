@@ -63,3 +63,6 @@ REAL CATALOGUE STARTER
 The initial catalogue uses product models and product photos from STANLEY's official Asia product catalogue/pages. These are reference listings only, NOT confirmation that M/S Bharat Tools stocks these exact products or is an authorized STANLEY dealer. Prices are intentionally set to Contact for Price. Confirm with the shop and suppliers before publishing as available stock. Product image URLs are hosted by STANLEY and may change; for reliability, obtain permission and host approved images in your own assets folder.
 Current image/product references: https://asia.stanleytools.global/products/power-tools
 Do not imply brand authorization or stock availability without confirmation.
+
+HERO SLIDESHOW + AGENCY CREDIT UPDATE
+Hero drill/tool photograph changes automatically every 4.5 seconds. A rotating industrial-yellow perimeter animation frames the photo. AZ Digital Solutions credit is centered in the yellow contact section and links to https://www.instagram.com/azdigitalsolutions/ . If the Instagram handle differs from the agency's live profile, update the href in index.html.
