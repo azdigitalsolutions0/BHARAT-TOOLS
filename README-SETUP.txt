@@ -81,3 +81,6 @@ LATEST BRAND / CART FIX
 - Stale previous demo cart key bt_cart is removed; the new cart uses bt_cart_v3 and starts empty on this release.
 - AZ DIGITAL SOLUTIONS appears centered inside the yellow contact section and links directly to https://www.instagram.com/azdigitalsolutions/ (confirm handle if needed).
 - Footer's Bharat Tools logo and brand label are restored at the left with copyright at the right.
+
+FINAL LOGO / AGENCY CREDIT FIX
+The logo asset is now circular with transparent pixels outside the emblem; its black interior is preserved. Hero pseudo-background/photo layers are disabled so no rectangular drill photo appears behind the logo. Agency credit reads exactly 'Website Designed & Developed by AZ Digital Solutions'; the AZ Digital Solutions text is the clickable Instagram link.

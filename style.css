@@ -120,3 +120,24 @@ footer .footer>span{width:auto!important;text-align:right;color:#aaa}
  .section,.band,.contact{opacity:.01;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
  .section.is-visible,.band.is-visible,.contact.is-visible{opacity:1;transform:translateY(0)}
 }
+
+/* FINAL FIX: show only the circular logo, never a rectangular photo/background */
+.logo-hero{background:radial-gradient(circle at center,#262626 0%,#151515 62%,#101010 100%)!important}
+.logo-hero:before,.logo-hero:after{content:none!important;display:none!important;background:none!important}
+.logo-hero .hero-photo-frame,.logo-hero .hero-product-scene{display:none!important}
+.hero-brand-logo{width:min(390px,72%);background:transparent!important;mix-blend-mode:normal;object-fit:contain}
+.logo-orbit{pointer-events:none}
+.agency-credit{width:100%;margin:28px auto 0;padding:18px 12px 0;border-top:1px solid #1112;display:flex;justify-content:center;align-items:center;text-align:center}
+.agency-credit a{display:inline-block;color:#111;text-decoration:none;border:0;padding:0;font:600 13px/1.5 "Space Grotesk";letter-spacing:.015em}
+.agency-credit a strong{font-weight:800;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
+.agency-credit a:hover{color:#fff}
+.footer{display:flex!important;align-items:center;justify-content:space-between!important;text-align:left!important}
+.footer .brand{display:flex!important;align-items:center;gap:10px;color:#fff;text-decoration:none}
+.footer .brand img{width:42px;height:42px;object-fit:contain;background:transparent}
+.footer>span{font-size:9px;text-align:right}
+@media(max-width:600px){
+ .agency-credit{margin-top:22px;padding-top:15px}
+ .agency-credit a{font-size:11px}
+ .footer{flex-direction:column!important;gap:12px;justify-content:center!important;text-align:center!important}
+ .footer>span{text-align:center}
+}
