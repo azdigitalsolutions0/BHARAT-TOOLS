@@ -66,3 +66,10 @@ Do not imply brand authorization or stock availability without confirmation.
 
 HERO SLIDESHOW + AGENCY CREDIT UPDATE
 Hero drill/tool photograph changes automatically every 4.5 seconds. A rotating industrial-yellow perimeter animation frames the photo. AZ Digital Solutions credit is centered in the yellow contact section and links to https://www.instagram.com/azdigitalsolutions/ . If the Instagram handle differs from the agency's live profile, update the href in index.html.
+
+LATEST REQUESTED VISUAL BEHAVIOUR
+- The category ticker now scrolls continuously and loops seamlessly: POWER TOOLS, HAND TOOLS, CONSTRUCTION TOOLS, HARDWARE, BUILDING MATERIALS.
+- Hero image changes every 4 seconds among STANLEY product catalogue photos.
+- Yellow animated perimeter remains around the hero photo.
+- AZ DIGITAL SOLUTIONS is centered at the bottom of the yellow contact section; the text itself is clickable and opens https://www.instagram.com/azdigitalsolutions/ . No 'Instagram profile' label is displayed.
+- Original black footer retains Bharat Tools logo/brand and copyright.

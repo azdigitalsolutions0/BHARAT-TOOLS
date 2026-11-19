@@ -47,3 +47,20 @@
  .agency-credit span{font-size:8px}
  .agency-credit a{font-size:12px}
 }
+
+/* FINAL REQUEST: continuously moving category ticker */
+.ticker{overflow:hidden;white-space:nowrap}
+.ticker-track{display:flex;width:max-content;animation:tickerMove 24s linear infinite;will-change:transform}
+.ticker-track span{display:block;flex:none;padding-right:28px}
+.ticker-track b{margin:0 18px}
+.ticker:hover .ticker-track{animation-play-state:paused}
+@keyframes tickerMove{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+/* Keep the yellow perimeter running around the hero product photo */
+.hero-photo-frame{position:absolute;inset:9px;overflow:hidden;z-index:0;background:#202020}
+.hero-photo-frame:after{content:"";position:absolute;inset:0;z-index:2;padding:3px;background:conic-gradient(from 0deg,transparent 0 72%,#f4c400 79%,#fff6b8 82%,#f4c400 85%,transparent 92%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:yellowBorderRun 3.2s linear infinite;pointer-events:none}
+@keyframes yellowBorderRun{to{transform:rotate(360deg)}}
+/* AZ Digital Solutions credit centered within the yellow contact section */
+.agency-credit{display:flex;justify-content:center;align-items:center;margin:30px auto 0;padding-top:18px;border-top:1px solid #1112;text-align:center}
+.agency-credit a{display:inline-block;color:#111;text-decoration:none;font:700 13px "Space Grotesk";letter-spacing:.08em;border-bottom:2px solid #111;padding:4px 2px;transition:color .2s,border-color .2s}
+.agency-credit a:hover{color:#fff;border-color:#fff}
+@media(max-width:600px){.ticker{padding:12px 0}.ticker-track{animation-duration:20s}.agency-credit{margin-top:23px;padding-top:15px}}

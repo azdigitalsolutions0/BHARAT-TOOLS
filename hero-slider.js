@@ -2,20 +2,29 @@
   const image = document.getElementById("heroSlideImage");
   if (!image) return;
   const photos = [
-    "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=1400&q=90",
-    "https://images.unsplash.com/photo-1581147036324-c1c89c2c8a?auto=format&fit=crop&w=1400&q=90",
-    "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=1400&q=90",
-    "https://images.unsplash.com/photo-1581783898377-1c85bf937427?auto=format&fit=crop&w=1400&q=90",
-    "https://images.unsplash.com/photo-1581244277943-fe4a9c777189?auto=format&fit=crop&w=1400&q=90"
+    "https://asia.stanleytools.global/ASIA/PRODUCT/IMAGES/HIRES/SCH12S2K_1.jpg?resize=900x900",
+    "https://asia.stanleytools.global/ASIA/PRODUCT/IMAGES/HIRES/STHR272KS_1.jpg?resize=900x900",
+    "https://asia.stanleytools.global/ASIA/PRODUCT/IMAGES/HIRES/SDH600_1.jpg?resize=900x900",
+    "https://asia.stanleytools.global/ASIA/PRODUCT/IMAGES/HIRES/STGS7100_1.jpg?resize=900x900",
+    "https://asia.stanleytools.global/ASIA/PRODUCT/IMAGES/HIRES/STEL101_1.jpg?resize=900x900",
+    "https://asia.stanleytools.global/ASIA/PRODUCT/IMAGES/HIRES/SCC500_1.jpg?resize=900x900"
   ];
   let index = 0;
   photos.forEach(src => { const preload = new Image(); preload.src = src; });
-  window.setInterval(() => {
-    index = (index + 1) % photos.length;
-    image.classList.add("changing");
-    window.setTimeout(() => {
-      image.src = photos[index];
-      image.onload = () => image.classList.remove("changing");
-    }, 350);
-  }, 4500);
+  const changePhoto = () => {
+    const next = (index + 1) % photos.length;
+    const preload = new Image();
+    preload.onload = () => {
+      image.classList.add("changing");
+      window.setTimeout(() => {
+        image.src = photos[next];
+        image.alt = "Power tools product showcase";
+        image.classList.remove("changing");
+        index = next;
+      }, 250);
+    };
+    preload.onerror = () => { index = next; };
+    preload.src = photos[next];
+  };
+  window.setInterval(changePhoto, 4000);
 })();
