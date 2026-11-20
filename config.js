@@ -1,6 +1,6 @@
-// Add your Supabase project details here to enable live accounts, orders and admin.
-// Keep the anon/publishable key here only. NEVER put a service_role key in frontend code.
+
+// Supabase configuration
 window.BT_CONFIG = {
-  supabaseUrl: "",
-  supabaseAnonKey: ""
+  supabaseUrl: "https://skwgcfqnxlvnnugwebcr.supabase.co",
+  supabaseAnonKey: "sb_publishable_5LDlFABSQVaLo1YCuyd-kg_q0piGCmr"
 };
